@@ -1,4 +1,6 @@
-## 块级作用域
+## 为什么需要块级作用域
+ES5 只有全局作用域和函数作用域，没有块级作用域，这带来很多不合理的场景。
+
 通过var声明变量存在变量提升：
 ```JavaScript
 if (condition) {
@@ -39,7 +41,7 @@ console.log(value) // Uncaught ReferenceError: value is not defined
 1. 不存在变量提升
 ```JavaScript
 if(condition) {
-    let value = 'value'
+    let value = 1
 }
 console.log(value) // Uncaught ReferenceError: value is not defined
 ```
@@ -47,19 +49,19 @@ console.log(value) // Uncaught ReferenceError: value is not defined
 
 2. 重复声明报错
  ```JavaScript
- let value = 'value'
- let value = 'value'
+ let value = 1
+ let value = 2
  ```
  重复声明同一个变量，会直接报错 Uncaught SyntaxError: Identifier 'value' has already been declared
 
 3. 不绑定在全局作用域上
 ```JavaScript
-var value = 'value'
-console.log(window.value) // value
+var value = 1
+console.log(window.value) // 1
 ```
 在来看一下let声明：
 ```JavaScript
-let value = 'value'
+let value = 1
 console.log(window.value) // undefined
 ```
 
@@ -108,7 +110,7 @@ let value = 1;
 
 看似很好理解，不保证你不犯错：
 ```JavaScript
-var value = "global";
+var value = 'global';
 
 // 例子1
 (function() {
