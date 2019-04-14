@@ -9,6 +9,7 @@
 * [知乎专栏](https://www.zhihu.com/people/hao-zhao-xing-25/activities)
 
 ## ES6+系列
+1. [ES6系列之 let 和 const](https://github.com/changming-hzh/Blog/blob/master/articles/ES6/ES6%E7%B3%BB%E5%88%97%E4%B9%8Blet%E5%92%8Cconst.md)
 
 ## JavaScript系列
 
