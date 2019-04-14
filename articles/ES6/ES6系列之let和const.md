@@ -6,7 +6,7 @@ if (condition) {
 }
 console.log(value)
 ```
-初学者可能会认为当变量condition为true时，才会创建value。当condition为false是，不会创建value，结果应该是报错。然而因为JavaScript存在变量提升的概念，代码等同于：
+初学者可能会认为当变量condition为true时，才会创建value。当condition为false时，不会创建value，结果应该是报错。然而因为JavaScript存在变量提升的概念，代码等同于：
 ```JavaScript
 var value
 if (condition) {
